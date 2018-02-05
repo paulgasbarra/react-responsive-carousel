@@ -52,8 +52,8 @@ class Thumbs extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (!prevProps.children && this.props.children && !this.state.initialized) {
-            this.setupThumbs();
+        if ((!prevProps.children && this.props.children && !this.state.initialized ) || prevProps.children != this.props.children) {
+          this.setupThumbs();
         }
     }
 
